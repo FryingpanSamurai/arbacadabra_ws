@@ -1,3 +1,7 @@
+ .home-overview {
+    max-width: 760px;
+ }
+
 section h2 {
     margin-bottom: 1rem;
     font-size: 2rem;

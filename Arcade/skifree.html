@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powder Run</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="skifree.css">
+</head>
+<body class="arcade-body">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../About/about.html">About</a></li>
+            <li><a href="../Services/services.html">Professional Services</a></li>
+            <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
+            <li><a href="../Store/store.html">Store</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-shell arcade-shell">
+        <section class="page-hero page-hero--compact arcade-hero">
+            <p class="eyebrow">Easter Egg</p>
+            <h1>Powder Run</h1>
+            <p class="lead">
+                Stay ahead of the yeti, dodge the trees, and keep your speed up.
+                Use <strong>A</strong> and <strong>D</strong> to carve left and right.
+            </p>
+        </section>
+
+        <section class="arcade-layout">
+            <article class="arcade-panel arcade-panel--game">
+                <div class="hud">
+                    <div class="hud-stat">
+                        <span class="hud-label">Score</span>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-label">Speed</span>
+                        <span id="speed">0</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-label">Yeti Gap</span>
+                        <span id="gap">0</span>
+                    </div>
+                </div>
+
+                <div class="canvas-wrap">
+                    <canvas id="ski-game" width="900" height="600" aria-label="Powder Run game"></canvas>
+                    <div id="overlay" class="overlay">
+                        <div class="overlay-card">
+                            <h2>Outrun the Yeti</h2>
+                            <p>Carve downhill, thread between the trees, and keep your momentum. Collisions slow you down, and the yeti gets bolder when you lose speed.</p>
+                            <button id="start-button" class="button-primary" type="button">Start Run</button>
+                            <p class="overlay-hint">Controls: A / D</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="arcade-panel arcade-panel--info">
+                <h2>How It Works</h2>
+                <ul class="feature-list">
+                    <li>Your score climbs as long as you survive.</li>
+                    <li>Uninterrupted skiing builds speed over time.</li>
+                    <li>Hitting a tree cuts your speed and lets the yeti close in.</li>
+                    <li>If the yeti catches you, the run is over.</li>
+                </ul>
+                <button id="restart-button" class="button-secondary" type="button">Restart</button>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Arbachouskas Group</p>
+        <p><a href="../index.html">Back to the mountain lodge</a></p>
+    </footer>
+
+    <script src="skifree.js"></script>
+</body>
+</html>

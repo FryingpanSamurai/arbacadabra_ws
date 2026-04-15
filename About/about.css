@@ -1,13 +1,62 @@
+.about-page {
+    padding-bottom: 4rem;
+}
+
+.about-hero {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.about-mission {
+    padding-top: 0;
+}
+
+.mission-text {
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #d9e3ee;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 1.5rem;
+}
+
+.about-grid--stacked {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-panel {
+    background: linear-gradient(180deg, rgba(28, 33, 43, 0.92), rgba(19, 23, 31, 0.96));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+
+.about-panel h2 {
+    margin-bottom: 0.85rem;
+}
+
 .team-member-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
 .team-member-img {
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
     overflow: hidden;
     border-radius: 50%;
+    border: 3px solid rgba(127, 194, 255, 0.2);
 }
 
 .team-member-img img {
@@ -19,11 +68,70 @@
 }
 
 .team-member-header {
-    font-size: x-large;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-/* .team-member-body {} */
+.team-member-body {
+    display: grid;
+    gap: 0.5rem;
+}
 
-.team-member-footer {
-    min-height: 12px;
+.who {
+    color: #7fc2ff;
+    font-weight: 700;
+}
+
+.what {
+    color: #d0d6df;
+}
+
+.data-focus {
+    max-width: 100%;
+}
+
+.alma-maters {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.alma-maters-label {
+    margin-bottom: 1rem;
+    color: #9ecfff;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.alma-maters-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem 2rem;
+}
+
+.alma-maters-logos img {
+    display: block;
+    max-height: 68px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 768px) {
+    .about-grid,
+    .about-grid--stacked {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member-img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .alma-maters-logos img {
+        max-height: 56px;
+    }
 }
